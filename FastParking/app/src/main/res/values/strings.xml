@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Fast Parking</string>
+    <string name="loading_screen">Loading Screen</string>
+    <string name="ex">ex</string>
+
+    <string name="title_activity_full_example">full_example</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_log_in_page">FastParking</string>
+    <!-- Strings related to register -->
+    <string name="real_name">Name</string>
+    <string name="register_page">Register page</string>
+    <string name="register">Sign Up</string>
+    <string name="action_sign_in">Register Now</string>
+    <!-- Strings related to login -->
+    <string name="prompt_user">Username</string>
+    <string name="Password">Password</string>
+    <string name="prompt_password">Password (Required)</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="action_log_in">Log In</string>
+    <string name="level">Level</string>
+    <string name="level_current">Current Account Level: </string>
+    <string name="slot">Slot</string>
+    <!-- Strings related to message -->
+    <string name="available_list">Available List</string>
+    <string name="choice_yes">Yes</string>
+    <string name="choice_no">Cancel</string>
+    <string name="position">Parking Slot Position:</string>
+    <string name="ask_parking_question">Do you wish to park here? </string>
+    <string name="ask_leaving_question">Do you wish to leaving current parking position? </string>
+    <string name="redMark">Occupied</string>
+    <string name="green_Mark">Available</string>
+    <string name="yellow_Mark">Using</string>
+    <string name="switch_login">Already signed up? Log in then</string>
+    <string name="blue_mark">Special</string>
+    <string name="map_key">Map Key</string>
+    <string name="purple_mark">Reserved</string>
+    <string name="account_list_title">Account Table</string>
+    <string name="parking_slot_detail">Parking Slot Detail</string>
+    <string name="availability">Availability:</string>
+    <string name="using_by">Using By:</string>
+    <string name="slot_level">Slot Level:</string>
+    <string name="button_leaving">Back to home page</string>
+    <string name="click_to_change_parking_slot_access_level">Click to change Parking slot Access Level</string>
+    <string name="account_summary">Account Summary</string>
+    <string name="parking_slot_list">Parking Slot List:</string>
+</resources>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentSwitch"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/MapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/level_current"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/inLv"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/scaleScrollTest">
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="25sp"
+                                    android:text="@string/map_key"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <View
+                                        android:layout_width="50sp"
+                                        android:layout_height="20sp"
+                                        android:background="@android:color/holo_red_light" />
+                                    <TextView
+                                        android:layout_width="100sp"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textColor="@android:color/black"
+                                        android:text="@string/redMark"/>
+                                    <View
+                                        android:layout_width="50sp"
+                                        android:layout_height="20sp"
+                                        android:background="@color/green" />
+                                    <TextView
+                                        android:layout_width="100sp"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textColor="@android:color/black"
+                                        android:text="@string/green_Mark"/>
+                                    <View
+                                        android:layout_width="50sp"
+                                        android:layout_height="20sp"
+                                        android:background="@color/purple" />
+                                    <TextView
+                                        android:layout_width="100sp"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textColor="@android:color/black"
+                                        android:text="@string/purple_mark"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <View
+                                        android:layout_width="50sp"
+                                        android:layout_height="20sp"
+                                        android:background="@color/yellow"/>
+                                    <TextView
+                                        android:layout_width="100sp"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textColor="@android:color/black"
+                                        android:text="@string/yellow_Mark"/>
+                                    <View
+                                        android:layout_width="50sp"
+                                        android:layout_height="20sp"
+                                        android:background="@android:color/holo_blue_bright"/>
+                                    <TextView
+                                        android:layout_width="100sp"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textColor="@android:color/black"
+                                        android:text="@string/blue_mark"/>
+                                </LinearLayout>
+                                <GridLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/scaleLayoutTest">
+                                    <!-- Wall-->
+                                    <View
+                                        android:layout_width="25sp"
+                                        android:layout_height="25sp"
+                                        android:background="@color/material_blue_grey_800"
+                                        android:layout_row="1"
+                                        android:layout_column="0"
+                                        android:layout_gravity="fill_vertical"
+                                        android:layout_rowSpan="21" />
+                                    <View
+                                        android:layout_width="25sp"
+                                        android:layout_height="25sp"
+                                        android:background="@color/material_blue_grey_800"
+                                        android:layout_row="21"
+                                        android:layout_column="0"
+                                        android:layout_gravity="fill_horizontal"
+                                        android:layout_columnSpan="20" />
+                                    <View
+                                        android:layout_width="25sp"
+                                        android:layout_height="25sp"
+                                        android:background="@color/material_blue_grey_800"
+                                        android:layout_row="2"
+                                        android:layout_column="20"
+                                        android:layout_gravity="fill_vertical"
+                                        android:layout_rowSpan="20" />
+
+                                    <View
+                                        android:layout_width="25sp"
+                                        android:layout_height="25sp"
+                                        android:background="@color/material_blue_grey_800"
+                                        android:layout_row="1"
+                                        android:layout_column="1"
+                                        android:layout_gravity="fill_horizontal"
+                                        android:layout_columnSpan="20" />
+                                    <View
+                                        android:layout_width="55sp"
+                                        android:layout_height="55sp"
+                                        android:background="@color/material_blue_grey_800"
+                                        android:layout_row="2"
+                                        android:layout_column="1" />
+                                    <View
+                                        android:layout_width="40sp"
+                                        android:layout_height="25sp"
+                                        android:background="@color/material_blue_grey_800"
+                                        android:layout_row="6"
+                                        android:layout_column="6"
+                                        android:layout_gravity="fill_vertical"
+                                        android:layout_rowSpan="15" />
+                                    <!-- row one-->
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C1"
+                                        android:layout_row="2"
+                                        android:layout_column="2"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C2"
+                                        android:layout_row="2"
+                                        android:layout_column="3"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C3"
+                                        android:layout_row="2"
+                                        android:layout_column="4"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C4"
+                                        android:layout_row="2"
+                                        android:layout_column="5"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C5"
+                                        android:layout_row="2"
+                                        android:layout_column="6"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C6"
+                                        android:layout_row="2"
+                                        android:layout_column="7"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C7"
+                                        android:layout_row="2"
+                                        android:layout_column="8"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C8"
+                                        android:layout_row="2"
+                                        android:layout_column="9"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C9"
+                                        android:layout_row="2"
+                                        android:layout_column="10"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <Button
+                                        android:layout_width="40sp"
+                                        android:layout_height="55sp"
+                                        android:id="@+id/btR1C10"
+                                        android:layout_row="2"
+                                        android:layout_column="11"
+                                        android:layout_gravity="fill_vertical"/>
+                                    <!--row two-->
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C1"
+                                        android:layout_row="4"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C2"
+                                        android:layout_row="5"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C3"
+                                        android:layout_row="6"
+                                        android:layout_column="1" />
+
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C4"
+                                        android:layout_row="7"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C5"
+                                        android:layout_row="8"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C6"
+                                        android:layout_row="9"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C7"
+                                        android:layout_row="10"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C8"
+                                        android:layout_row="11"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C9"
+                                        android:layout_row="12"
+                                        android:layout_column="1" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR2C10"
+                                        android:layout_row="13"
+                                        android:layout_column="1" />
+                                    <!-- row 3 -->
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C1"
+                                        android:layout_row="6"
+                                        android:layout_column="5" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C2"
+                                        android:layout_row="7"
+                                        android:layout_column="5" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C3"
+                                        android:layout_row="8"
+                                        android:layout_column="5" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C4"
+                                        android:layout_row="9"
+                                        android:layout_column="5" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C5"
+                                        android:layout_row="10"
+                                        android:layout_column="5" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C6"
+                                        android:layout_row="11"
+                                        android:layout_column="5" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C7"
+                                        android:layout_row="12"
+                                        android:layout_column="5" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR3C8"
+                                        android:layout_row="13"
+                                        android:layout_column="5" />
+
+                                    <!-- row 4 -->
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C1"
+                                        android:layout_row="6"
+                                        android:layout_column="7" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C2"
+                                        android:layout_row="7"
+                                        android:layout_column="7" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C3"
+                                        android:layout_row="8"
+                                        android:layout_column="7" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C4"
+                                        android:layout_row="9"
+                                        android:layout_column="7" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C5"
+                                        android:layout_row="10"
+                                        android:layout_column="7" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C6"
+                                        android:layout_row="11"
+                                        android:layout_column="7" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C7"
+                                        android:layout_row="12"
+                                        android:layout_column="7" />
+                                    <Button
+                                        android:layout_width="55sp"
+                                        android:layout_height="40sp"
+                                        android:id="@+id/btR4C8"
+                                        android:layout_row="13"
+                                        android:layout_column="7" />
+
+                                </GridLayout>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </ScrollView>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/level_current"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/inLevel"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <ExpandableListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/expandableListView" />
+                </LinearLayout>
+            </FrameLayout>
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"/>
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>
